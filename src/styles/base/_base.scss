@@ -1,0 +1,21 @@
+// rem - have better support than px ,
+html { // This selects the entire html doc
+    font: 62.5%; // The pixel base is 16, so setting it to 10 makes it easy to use rems. 1.6 rems = 16 pixels
+}
+ 
+body {
+    font-family: Helvetica, Arial, sans-serif;  
+    font-size: $m-size;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled{
+    cursor: default;
+}
+
+.is-active {
+    font-weight: bold;
+}
