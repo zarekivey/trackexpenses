@@ -1,1 +1,5 @@
 node_modules/
+puublic/bundle.js
+puublic/bundle.js.map
+puublic/styles.css
+puublic/styles.css.map
