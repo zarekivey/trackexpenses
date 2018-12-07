@@ -5,7 +5,6 @@ module.exports = (env) => {
     const isProduction = env === 'production';
     const CSSExtract = new MiniCssExtractPlugin({ filename: 'styles.css' }); 
 
-    console.log('env', env)
     return { // This is where we configure all of the details
     entry: './src/app.js', // Where webpack should start
     output: {
