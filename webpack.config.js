@@ -9,7 +9,7 @@ module.exports = (env) => {
     return { // This is where we configure all of the details
     entry: './src/app.js', // Where webpack should start
     output: {
-        path: path.join(__dirname, 'public'), // The ABSOLUTE path to where want to output the webapack file
+        path: path.join(__dirname, 'public', 'dist'), // The ABSOLUTE path to where want to output the webapack file
         filename: 'bundle.js'
     },
     module: {
@@ -43,6 +43,7 @@ module.exports = (env) => {
     devServer: {
         contentBase: path.join(__dirname, 'public'), // Where we want to host the live server
         historyApiFallback: true, // This tells the server we'll be handling routing via our client side code
+        publicPath: '/dist/'
     }
 };
 };
