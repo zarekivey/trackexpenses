@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Zarek Ivey",
   "license": "MIT",
+  "engines": {
+    "node": "10.11.0"
+  },
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
