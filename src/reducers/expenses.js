@@ -19,8 +19,10 @@ export default (state = expensesReducerDefaultState, action) => {
                     }
                 } else {
                     return expense; // This means make no changes
-                };
+                }; 
             });
+            case 'SET_EXPENSES':
+                return action.expenses;
         default:
             return state;
     }

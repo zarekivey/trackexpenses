@@ -26,7 +26,7 @@ test('should not remove expense if id not found', () => {
 
 test('should add an expense', () => {
     const expense = { // remember that you can insert objects and items into your test cases !!!!
-        id: '109',
+        id: '109', 
         description: 'Laptop',
         note: '',
         createdAt: 20000,
@@ -64,4 +64,13 @@ test('should not edit an expense if expense not found', () => {
     };
     const state = expensesReducer(expenses, action)
     expect(state).toEqual(expenses);
+});
+
+test('should set expenses', () => {
+    const action = {
+        type: 'SET_EXPENSES',
+        expenses: [expenses[1]]
+    }
+    const state = expensesReducer(expenses, action);
+    expect(state).toEqual([expenses[1]]);
 })
