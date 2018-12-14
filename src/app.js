@@ -10,6 +10,7 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css'
 import './firebase/firebase'
+import './playground/promises'
 
 const store = configureStore(); // This gives us access to all of the stores methods
 
@@ -19,4 +20,4 @@ const jsx = ( // provider takes 1 prop, your apps store that you want to provide
     </Provider>
 )
 
-ReactDOM.render(jsx, document.getElementById('app'));
+ReactDOM.render(jsx, document.getElementById('app')); 

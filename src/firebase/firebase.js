@@ -13,20 +13,22 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
-// a sub that notifies us whenever a child is removed, child_removed event
-database.ref('expenses').on('child_removed', (snapshot) => {
-  console.log(snapshot.key, snapshot.val())
-})
+export { firebase, database as default };
 
-// a sub that notifies us whenever a child is changed, child_changed event
-database.ref('expenses').on('child_changed', (snapshot) => {
-  console.log(snapshot.key, snapshot.val())
-})
+// // a sub that notifies us whenever a child is removed, child_removed event
+// database.ref('expenses').on('child_removed', (snapshot) => {
+//   console.log(snapshot.key, snapshot.val())
+// })
 
-// a sub that notifies us whenever a child is added, child_added event
-database.ref('expenses').on('child_added', (snapshot) => {
-  console.log(snapshot.key, snapshot.val())
-})
+// // a sub that notifies us whenever a child is changed, child_changed event
+// database.ref('expenses').on('child_changed', (snapshot) => {
+//   console.log(snapshot.key, snapshot.val())
+// })
+
+// // a sub that notifies us whenever a child is added, child_added event, it fires once for all data thats already in the location
+// database.ref('expenses').on('child_added', (snapshot) => {
+//   console.log(snapshot.key, snapshot.val())
+// })
 
 // database.ref('expenses')
 //   .once('value')
