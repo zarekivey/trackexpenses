@@ -28,6 +28,7 @@
     "express": "4.15.4",
     "extract-text-webpack-plugin": "3.0.0",
     "firebase": "4.2.0",
+    "history": "4.7.2",
     "latest": "^0.2.0",
     "mini-css-extract-plugin": "^0.5.0",
     "moment": "2.18.1",

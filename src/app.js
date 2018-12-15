@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import AppRouter from './routers/AppRouter';
+import AppRouter, { history } from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import { startSetExpenses } from './actions/expenses';
 import { setTextFilter } from './actions/filters';
@@ -31,6 +31,6 @@ firebase.auth().onAuthStateChanged((user) => {
     if (user) {
         console.log('log in')
     } else {
-        console.log('log out')
+        history.push('/')
     }
 });
