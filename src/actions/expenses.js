@@ -32,8 +32,16 @@ export const startAddExpense = (expenseData = {}) => {
 //REMOVE_EXPENSE
 export const removeExpense = ( { id } = {} ) => ({ // This accepts an id, if there is none it returns an empty array
     type: 'REMOVE_EXPENSE',
-    id // it accepts the items id, this function gets used in the reducer
+    id
 });
+
+export const startRemoveExpense = ({ id } = {}) => {
+    return (dispatch) => {
+        return database.ref(`expenses/${id}`).remove().then(() => {
+            dispatch(removeExpense({ id }));
+        });
+    };
+};
 
 // EDIT_EXPENSE
 export const editExpense = (id, updates) => ({
