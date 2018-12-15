@@ -50,6 +50,14 @@ export const editExpense = (id, updates) => ({
     updates
 });
 
+export const startEditExpense = (id, updates) => {
+     return (dispatch) => {
+        return database.ref(`expenses/${id}`).update(updates).then(() => {
+            dispatch(editExpense(id, updates))
+        });
+     };
+};
+
 // SET_EXPENSES - Grab expense data from firebase, put it into array
 export const setExpenses = (expenses) => ({
     type: 'SET_EXPENSES',
