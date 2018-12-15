@@ -1,5 +1,6 @@
 import * as firebase from 'firebase';
 
+
 const config = {
     apiKey: process.env.FIREBASE_API_KEY,
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
@@ -12,8 +13,9 @@ const config = {
 firebase.initializeApp(config);
 
 const database = firebase.database();
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-export { firebase, database as default };
+export { firebase, googleAuthProvider, database as default };
 
 // // a sub that notifies us whenever a child is removed, child_removed event
 // database.ref('expenses').on('child_removed', (snapshot) => {
