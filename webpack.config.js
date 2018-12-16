@@ -15,7 +15,7 @@ module.exports = (env) => {
     const CSSExtract = new MiniCssExtractPlugin({ filename: 'styles.css' }); 
 
     return { // This is where we configure all of the details
-    entry: './src/app.js', // Where webpack should start
+    entry: ['babel-polyfill', './src/app.js'], // Where webpack should start
     output: {
         path: path.join(__dirname, 'public', 'dist'), // The ABSOLUTE path to where want to output the webapack file
         filename: 'bundle.js'
