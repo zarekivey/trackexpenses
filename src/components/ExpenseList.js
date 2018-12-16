@@ -4,7 +4,12 @@ import ExpenseListItem from './ExpenseListItem';
 import selectExpenses from '../selectors/expenses';
 
 export const ExpenseList = (props) => ( // This gives us access to the props grabbed from the store
-    <div>
+    <div className="contetnt-container">
+        <div className="list-header">
+            <div className="show-for-mobile">Expenses</div>
+            <div className="show-for-desktop">Expense</div>
+            <div className="show-for-desktop">Amount</div>
+        </div>
         {
             props.expenses.length === 0 ? (
                <p>No expenses</p>
