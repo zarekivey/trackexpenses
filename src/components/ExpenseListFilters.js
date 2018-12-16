@@ -3,7 +3,7 @@ import {connect } from 'react-redux';
 import { DateRangePicker } from  'react-dates';
 import { setTextFilter, sortByAmount, sortByDate, setStartDate, setEndDate } from '../actions/filters';
 
-export class ExpenseListFilters extends React.Component {
+export class ExpenseListFilters extends React.Component { 
     state = { 
         calendarFocused: null, 
     };
@@ -26,20 +26,25 @@ export class ExpenseListFilters extends React.Component {
     };
     render() {
         return ( // the props from the connect, this gives us acces to info from the store, the text values
-            <div>
-                <input
+            <div className="content-container">
+            <div className="input-group">
+                <div className="input-group__item"> 
+                    <input
                     type="text"
                     value={this.props.filters.text}
                     onChange={this.onTextChange}
-                />
-                <select 
+            /></div>
+                <div className="input-group__item">                 
+                    <select 
                     value={this.props.filters.sortBy} 
                     onChange={this.onSortChange}
                 >
                     <option value="date">Date</option>
                     <option value="amount">Amount</option>
-                </select>
-                <DateRangePicker
+                    </select>
+                </div>
+                <div className="input-group__item">               
+                    <DateRangePicker
                     startDate={this.props.filters.startDate}
                     endDate={this.props.filters.endDate}
                     onDatesChange={this.onDatesChange}
@@ -48,8 +53,9 @@ export class ExpenseListFilters extends React.Component {
                     showClearDates={true} // to clear the dates
                     numberOfMonths={1} //  the amount fo dates shown 
                     isOutsideRange={() => false}
-                />
+            /></div>
             </div>
+        </div>
         )
     }
 }
