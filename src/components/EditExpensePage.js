@@ -16,7 +16,7 @@ render() {
     return (
             <div>
                 <div className="page-header">
-                    <div classaName="content-container">
+                    <div className="content-container">
                         <h1 className="page-header__title">Edit Your Expense</h1>
                     </div>
                 </div>
