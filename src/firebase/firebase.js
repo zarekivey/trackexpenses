@@ -1,5 +1,4 @@
 import * as firebase from 'firebase';
-const cors = require('cors')({origin: true});
 
 
 const config = {
