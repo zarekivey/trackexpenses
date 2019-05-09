@@ -13,7 +13,7 @@ export default ( state = filtersReducerDefaultState, action) => {
     switch (action.type) {
         case 'SET_TEXT_FILTER':
             return {
-                ...state, // spreading out the old state and adding on the new e
+                ...state,
                 text: action.text
             }
         case 'SORT_BY_AMOUNT':
@@ -28,8 +28,8 @@ export default ( state = filtersReducerDefaultState, action) => {
             }
         case 'SET_START_DATE':
             return {
-                ...state, // speading out the old array
-                startDate: action.startDate // overriding the old value
+                ...state, 
+                startDate: action.startDate 
             }
         case 'SET_END_DATE':
             return {

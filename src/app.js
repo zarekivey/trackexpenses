@@ -13,9 +13,8 @@ import { firebase } from './firebase/firebase'
 import { userInfo } from 'os';
 import LoadingPage from './components/LoadingPage'
 
-const store = configureStore(); // This gives us access to all of the stores methods
-
-const jsx = ( // provider takes 1 prop, your apps store that you want to provide to the components
+const store = configureStore(); 
+const jsx = ( 
     <Provider store={store}>
         <AppRouter />
     </Provider>

@@ -2,7 +2,6 @@ import uuid from 'uuid'
 import database from '../firebase/firebase'
 
 //ADD_EXPENSE  ACTION GENERATOR
-// passing the type and expense through
 export const addExpense = (expense) => ({ 
     type:'ADD_EXPENSE',
     expense
@@ -31,7 +30,7 @@ export const startAddExpense = (expenseData = {}) => {
 };
 
 //REMOVE_EXPENSE
-export const removeExpense = ( { id } = {} ) => ({ // This accepts an id, if there is none it returns an empty array
+export const removeExpense = ( { id } = {} ) => ({ 
     type: 'REMOVE_EXPENSE',
     id
 });
